@@ -1,15 +1,19 @@
-set mes tty | awk '{print $1}'
+# enable vi mode
+fish_vi_key_bindings
+set LANG en_US.UTF-8
+set fish_greeting ""
+set TERMINAL st
+set READER zathura
+set EDITOR nvim
 # if test "$mes" = "tty"
 #     fbterm >/dev/null 2>&1
 # end
-set fish_greeting ""
-set EDITOR nvim
-# UTF-8
-set LANG en_US.UTF-8
 # autojump
 source /usr/share/autojump/autojump.fish
-# enable vi mode
-fish_vi_key_bindings
+# NNN
+set NNN_USE_EDITOR nvim
+export NNN_FIFO="/tmp/nnn.fifo"
+export NNN_PLUG="f:treeview;o:fzopen;d:diffs;p:preview-tabbed;v:vidthumb"
 # alias
 set PATH /home/pi/.cargo/bin/ $PATH
 set PATH /usr/local/llvm11/bin/ $PATH
@@ -27,7 +31,7 @@ alias ra "ranger"
 alias md "mkdir"
 alias cy "cowsay"
 alias n  "neofetch"
-alias se "du -a ~/.config/* ~/github/* |awk '{print \$2}' | fzf --preview 'bat --color=always --theme=gruvbox {}' --border | xargs -r nvim"
+alias se "du -a ~/.config/* ~/github/* |awk '{print \$2}' | fzf --preview 'bat --color=always --style=plain --theme=gruvbox {}' --border | xargs -r nvim"
 alias vf "fzf --preview 'bat --color=always --theme=gruvbox {}' --border | xargs -r -I % nvim %"
 alias apt "sudo apt"
 alias ep "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
