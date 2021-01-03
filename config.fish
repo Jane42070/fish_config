@@ -14,19 +14,23 @@ source /usr/share/autojump/autojump.fish
 set NNN_USE_EDITOR nvim
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_PLUG="f:treeview;o:fzopen;d:diffs;p:preview-tabbed;v:vidthumb"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
 # alias
-set PATH /home/pi/.cargo/bin/ $PATH
-set PATH /usr/local/llvm11/bin/ $PATH
+set PATH /home/whoami/.cargo/bin/ $PATH
+# set PATH /usr/local/llvm11/bin/ $PATH
 # go procedure
-set PATH /home/pi/go/bin/ $PATH
-set PATH /usr/local/go/bin/ $PATH
+set PATH /home/whoami/go/bin/ $PATH
+# set PATH /usr/local/go/bin/ $PATH
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 # python
-set PATH /home/pi/.local/bin/ $PATH
+set PATH /home/whoami/.local/bin/ $PATH
 alias python "python3"
 alias pip "pip3"
 # set PATH /usr/local/node/bin/ $PATH
+alias htop "htop -t"
 alias ra "ranger"
 alias md "mkdir"
 alias cy "cowsay"
