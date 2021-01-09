@@ -25,6 +25,9 @@ set PATH /home/whoami/go/bin/ $PATH
 # set PATH /usr/local/go/bin/ $PATH
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
+# rust
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 # python
 set PATH /home/whoami/.local/bin/ $PATH
 alias python "python3"
@@ -37,7 +40,6 @@ alias cy "cowsay"
 alias n  "neofetch"
 alias se "du -a ~/.config/* ~/github/* |awk '{print \$2}' | fzf --preview 'bat --color=always --style=plain --theme=gruvbox {}' --border | xargs -r nvim"
 alias vf "fzf --preview 'bat --color=always --theme=gruvbox {}' --border | xargs -r -I % nvim %"
-alias apt "sudo apt"
 alias ep "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 # Set environment path
 #set PATH /Users/qilinjane/opsource/nvim-osx64/bin/ $PATH
