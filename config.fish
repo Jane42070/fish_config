@@ -3,6 +3,7 @@ fish_vi_key_bindings
 set LANG en_US.UTF-8
 set fish_greeting ""
 set TERMINAL st
+set BROWSER chromium
 set READER zathura
 set EDITOR nvim
 # if test "$mes" = "tty"
