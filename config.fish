@@ -14,7 +14,9 @@ source /usr/share/autojump/autojump.fish
 # NNN
 set NNN_USE_EDITOR nvim
 export NNN_FIFO="/tmp/nnn.fifo"
-export NNN_PLUG="f:treeview;o:fzopen;d:diffs;p:preview-tabbed;v:vidthumb"
+export NNN_PLUG="j:autojump;f:fzcd;t:treeview;o:fzopen;d:diffs;p:preview-tui;v:vidthumb"
+alias nnn "nnn -e"
+# fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
@@ -36,13 +38,14 @@ alias pip "pip3"
 # set PATH /usr/local/node/bin/ $PATH
 alias htop "htop -t"
 alias ra "ranger"
+alias lg "lazygit"
 alias md "mkdir"
 alias mv "mv -v"
 alias cy "cowsay"
 alias clock "gluqlo -ampm -f"
 alias n  "neofetch"
-alias se "du -a ~/.config/* ~/github/* |awk '{print \$2}' | fzf --preview 'bat --color=always --style=plain --theme=gruvbox {}' --border | xargs -r nvim"
-alias vf "fzf --preview 'bat --color=always --theme=gruvbox {}' --border | xargs -r -I % nvim %"
+alias se "du -a ~/.config/* ~/github/* |awk '{print \$2}' | fzf --preview 'bat --color=always --style=plain --theme=gruvbox {}' | xargs -r nvim"
+alias vf "fzf --preview 'bat --color=always --theme=gruvbox {}' | xargs -r -I % nvim %"
 alias ep "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
 # Set environment path
 #set PATH /Users/qilinjane/opsource/nvim-osx64/bin/ $PATH
